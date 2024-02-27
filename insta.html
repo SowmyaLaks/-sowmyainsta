@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="slides.css">
+    <link rel="stylesheet" href="gnb.css">
+    <link rel="stylesheet" href="story.css">
+    <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="../text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title> sparat coding club | instagram clone coding </title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="gnb">
+        <div class="contents">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKlpev0yAyZdqM4sjJA7yoL_r_SpHKuWoOcg&usqp=CAU">
+            <input class="form-control form-control-sm" id="searchInput" type="text" placeholder="Search"
+                onfocus="this.placeholder=''" onblur="this.placeholder='Search'" name="search"
+                aria-label=".form-control-sm example" onkeypress="search()">
+            <div>
+                <i class="bi bi-house-door-fill"></i>
+                <i class="bi bi-cursor"></i>
+                <i class="bi bi-plus-square"></i>
+                <i class="bi bi-compass"></i>
+                <i class="bi bi-suit-heart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <!-- storys -->
+        <div class="story"  id="story">
+            <div class="story-1" id="story-1">
+                <div class="storyImg storyImg-1"></div>
+                <div class="storyImg storyImg-2"></div>
+                <div class="storyImg storyImg-3"></div>
+                <div class="storyImg storyImg-4"></div>
+                <div class="storyImg storyImg-5"></div>
+                <div class="storyImg storyImg-6"></div>
+                <div class="storyImg storyImg-7"></div>
+                <div class="storyImg storyImg-8"></div>
+                <div class="storyImg storyImg-9"></div>
+                <div class="storyImg storyImg-9"></div>
+            </div>
+            <div class="slide_prev_button slide_button">◀</div>
+            <div class="slide_next_button slide_button">▶</div>
+        </div>
+
+        <!-- first feed -->
+        <div class="content">
+            <!-- profile picture and userId -->
+            <div class="feedUser">
+                <img src="http://www.naewoeilbo.com/news/photo/202110/414285_189601_940.png">
+                <span>AMILY_99</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+            <!-- photo -->
+            <div class="card">
+                <img id="fristFeed" src="https://www.sputnik.kr/article_img/202009/article_1601089284.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="icons">
+                        <i class="bi bi-suit-heart "></i>
+                        <i class="bi bi-chat"></i>
+                        <a href="#" id="sns_urlCoby" class="btn_share_sns" title="새창" onclick="clip(); return false;">
+                            <i class="bi bi-send"></i></a>
+                        <i class="bi bi-bookmark"></i>
+                    </div>
+                    <p class="card-text" id="firstLikes">544 likes</p>
+                    <span class="user">AMILY_99</span>
+                     <!-- caption -->
+                    <span id="captionFirst" class="caption">
+                        Being with you is always..
+                    </span>
+                    <a class="btn-more" id="btn-1" onclick="readMoreFirst()">Read more</a>
+                    <ul id="firstComment">
+                    </ul>
+                    <!-- comment -->
+                    <div class="comment">
+                        <i class="bi bi-emoji-smile" id="smail-1"></i>
+                        <input class="form-control form-control-sm" id="commentFirstInput" type="text"
+                            placeholder="Add a comment" aria-label=".form-control-sm example">
+                        <button onclick="postFirstComment()">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- second feed -->
+        <div class="content">
+             <!-- profile picture and userId -->
+            <div class="feedUser">
+                <img
+                    src="https://5.imimg.com/data5/EY/BQ/GLADMIN-48857391/flowers-pink-nature-roses.png">
+                <span>Roses</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+             <!-- photo -->
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1132850000/photo/pink-rose-bushes-blooming-garden-summer.jpg?s=612x612&w=0&k=20&c=O0sN5-Jg4uJ6ssIsMXTGRjCd-a6l6D_g_xg8XtdF5v8="
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="icons">
+                        <i class="bi bi-suit-heart "></i>
+                        <i class="bi bi-chat"></i>
+                        <a href="#" id="sns_urlCoby" class="btn_share_sns" title="새창" onclick="clip(); return false;">
+                            <i class="bi bi-send"></i></a>
+                        <i class="bi bi-bookmark"></i>
+                    </div>
+                    <p class="card-text">1200 likes</p>
+                    <span class="user">red roses</span>
+                    <!-- caption -->
+                    <span id="captionSecond" class="caption">
+                        Red Roses ignite the soul
+                    </span>
+                    <a class="btn-more" id="btn-2" onclick="readMoreSecond()">Read more</a>
+                    <ul id="secondComment">
+                    </ul>
+                    <!-- comment -->
+                    <div class="comment">
+                        <i class="bi bi-emoji-smile" id="smail-2"></i>
+                        <input class="form-control form-control-sm" id="commentSecondInput" type="text"
+                            placeholder="Add a comment" aria-label=".form-control-sm example">
+                        <button onclick="postSecondComment()">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- third feed -->
+        <div class="content">
+            <!-- profile picture and userId -->
+            <div class="feedUser">
+                <img
+                    src="https://i.pinimg.com/originals/a4/24/80/a4248057e7a4b1342e33d1a1c8b1e8bd.jpg">
+                <span>Candles</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+            <!-- photo -->
+            <div class="card">
+                <div id="slideShow">
+                    <div class="slides">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQVFBgUFBUYGBgYGRkYGxgaGBgZGRgaGBoaGRkYGRgbIS0kGx0qIRgaJTclKi8xNDQ0GiM6PzoyPi0zNDEBCwsLEA8QHRISHzMqIys5MzU0NTMzMzM0NTMzMTMxMzMxMzMzNDMzMzMzMzkzMzMzMzMzMzM1NTEzMzMzMzMzM//AABEIAM8A9AMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xAA7EAACAQMCAwYDBgUEAgMAAAABAhEAAyESMQRBUQUGImFxgRMykUJSobHB8AcUYtHhI3KS8YKiFVTi/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAIBAwQFBv/EACwRAAICAQQBAwIFBQAAAAAAAAABAhEDBBIhMUETIlEyYYGRobHwBXHB0fH/2gAMAwEAAhEDEQA/APN2NNNDYUopKLrCUxWaHTzQFkwoqD0tVQZqAYwFJBUlNKKkigq1BqdWqVQMBNOhp2pLTEUFU1JaSLNaXAcA1xgqjJwPU7UjLoQbdIyytBcV6F317mJwaWntszBlIfVHzrEkRsDJx5VwN9aIuxJw9qkuim9RiiOKhVhQQAqUUop1oIFUCaKaE1ADUqVMaCBUqalQAqUU9KgBop4pUqAJAU9MKegC6TTVMimikLyE0zUTTTFKBWgaipMKekTTEApoi0JqmhoBBKlUNVPqoGsG1JWqemadLVQ2hoYpTftQW09dn3CUNxdpT99T9DP6VyNnhCdhXT91p4fibN9gdKtJ8xBUx1iaqck+Dq4tDmjBy+z/AGPTP4nAfygLffAHurf2rwnid69S7/d4bfF20tWZ0q+osRAMKQAAc/a8tq854jgiKjelLkXF/Ts0sKXT54MW5Qia0LnDCqz8KeWfKrlJM5+XSZYdoDSFKKQFMZRMaGaI1DIoBipjTxSoII04pUhQAqVKlQAqelSoAkKVSTalQBea4Kb4gqmzZpaqXaWby2XFRd6q6qU1NEbgpem11AVp2uyLh0hkZdRAEgiZ23qG0gVszi1INXoPaP8AC+6nDG9buanVdZtkfMAJIU9fWvO5ojJS6BprsnqpF6hT1NEWaPA2w6kYBnB/StCx2NfZWZLeoIupiGXC5yBMnY4Gaq9irIIAzq3JxEbV1PZ91To0K5cQIMNqWQGCiDAyOm1VyfJ6LSYk8CkuznrJZTBBBwcgjByDXR9h2PjXrVsk6WYA52BI1R0MUu0jhFZCGtqVneQGMDzgYrKdtLC4jlDuCs77g4/PBqmXD4Om3J4q8no3ffu5Zs2FuWUAKsFbJMqQYJk7zGfOvM+Nu8qftDtC9eWXuu/Mqbjsoj+kmBWcDoPUqcTke4PKmpN2ZcEsmCG2Tv7kHMn8aLwttSeZMAjkB1B/vVd1O+/mAYHrRuEyTt0zViMeWbk3ZluuT6mlFWk4RnYx1P50bjOxb1tdbIdPXp6025HDaZnxSIFRmlNMLYiKiVp6epIB6KfTU6VAENNR00WlQFAtNKKLSoIogFpUdIilQABt6anY5qM0APFKmmlNAGl2BoHEW2uLqRXVnHVQZr17v329wf8AJlUdGdtBthd1ggz/AE4mvGOBvaTNS4+8XOaqnC5IshKkeq9nfxHH8qEuAF1XTq+8IgEjrFeS3mlmI2LE/Uk0axwzMuKCVg1MIqN0Em2uhgKQFTVaJ/LtGrSdMldUHTqABKztMEGPOnsXaand5SWIkgSD1GBORXed0bqqt9jllVdLaScEsIx5iY864DsZymsgTiPc4ruOzrqIlxWJBZFKNJKjR8wbpvPtVUnUj0OlV6VL+dmN2jcLOdEqA0nVIOT907Z+tVb5MeETtB8O2MZqzx0MFK6isnxHmSQJHVd+VVrinYZB5H3kn6/jVMjrR+koX99QIHXqekxiai66pwSY685AGKslJXBEbyOTDG3T6VA29UqpJC89gSP0E1KlwVThaa+Si45A4O0np5n970Xs9NTqonLARyyQBUuLsad/mBjT5Hxb89/xqHDOBcldgQQPMVZF2c3NDa2d52r3cXhrQuA5EH1NXLHbFm9whV1AYCCK4PtnvVcur8MkwP0rLt9oMFIFIscvJx3ONlTikC3HA2DGPShU7GTPWmitJnFThaar3A8KXyBUN0h8eNzkox7YG1wrNtQrtsqYYQa37No25ucliR7x+tQ7S4Rri/ERZiljOzRl0rhF32vBgUopyKaacxiilFKaU0ASApVJNqVAAWXNNporLTaaLCiGmlpqemlpNAUMmKvMilapC20SASBU0fFQ0Ok12jV7OcBINZ3ECXPrT2ZqYt5pemXwwzmlSDcDw+pgOpr17je7if8AwioFGpT8cHnqZiCf+DR6CvKuBlWDRtXu9+7PZJcf/V1f+k1D910asumlijDd5Z4n2TZh2AEnlnaOgrds2w5AcqYVnCtOYM6GHNQSDFc1cLatSkg+Rj8qLa7RurjVqHRhM9QTvB6TSXfJ2ceKWKG1m32zxqXCDo04UMqxEiI0z9meVY198+GfQbEbzOIqF/tBmOpgDkkASNJ/pO4qr/MDYgk8p2E7451Di7st9SMYqPRYDDSYUmeZwfPbfr0qdgnIAhTiZgKSAJnn/egj70gdMbzuIO4pC7EBpI207bzkCkaJcvkbjEIOTOwGcxB39IoFl/LPX+9TusNiM823359KFawd/Pyq2HRh1PL4KN2zknzo/DoCtDZ96ZHgVZy0eddWBYZNNSarXCcG9ySomPambpBDHKctsVbKyITsCatcHxxtyP2Ks9nXxZuBriSAYYcxWl3qsWrgS5biTvHMHakbT4ZrhglCLmnUl2jn7/Gs2JMbxJj6VpcB22Vtm2RI5H9Kxvh5oukCm2oyvLOUnKTFeMsT1JNQinJqM1IhKKUVGaU0AEFKog0qADslLTScidxUC3nQNaJ6ak3DnTqHWDQdfnUbnFELpBxUUPCUVdnQ9gcXbQFLkDnMYI6Gs7irCBndAdGrSuMAnJz1iMedZVu6ZmtvsRUfULgLZPh1aAJWA0gEmGj03gjFLVG2GoWZRxtcrr8Csgq5w1sE5q43YL6S6OrAHAzOkBmZjzAULnGJzFVRYdQCwIBiG3UyJEMMHGaSadHW0koJ8milsDlXSr27xP8AKfy4ANsIyMSA0KYChYjTAkGS0yNq5vhTI61613f7LR+zBbIzctvJ5yxbPqJH0pMcWkx/6hlxwUXJXyv+nkz2xzFUr6AbVe4o6AdWCMGeR51luScjPpnG0wOVIoU+Dc8kUrbAuKncskWw8fM2kGeQGRByQZ3GBFWuFRArm4rMYAQDYEkZInzAnIEnBxUOPZmUAkkrpUcxCqoQgf7dI/8AEb1ajDle66K2uTnkOkmelK0YM/MfTII5U38zJkKOpHUiRP0qKXoIidxmcjrFRQeouHYW6p0ktGPxO4j2qsTBMZ/WnuTE8tqfh1XSSZ1fZwIj7U00VRn1E23SXgzTTxSbeozVx5weKv8AAdom0CIkHPvWetb3dXsYcTxNm0w8LOuv/aDLCf8AaDSyquS7BknCW6DpmPxHEtcJMbmal8Rguk11nf8A7Bt8Lxji0oS2wV0QDCggalHlqDekxXK8SOdCoaUpu5t8srsaizUiKamM7Y1PTGlFSQPSmmilFABEOKVRApUARMTTiKkyZpaaiwojiovb50QLRNQiosaMU+ytaGa6Hu+QCw+1KFRiTAcwDvOB5TFc+m9dB3ZBa6QsatMLLaQSx0kapEGGxkZoZo0bSyI2OFYMCF8JbSAzMyldR+S3aUHWx0Aw0hvCDvFQ7X4p7htIzFV1fCZS2pp8JUu5HzEBYkcjuNm4ohbTMunCIhYhQ3iJlkQ5DQ6tuMkGScF7C204ctIa87amZ/sqqso0Nk6iXJJxOAM6oRHSyRdtrxRlXX+YuZJVdOnUoGogs2clstM/eAxgVLh+0OJRQi3rioAxCrcZQAdXJT5EidsHANVxBkCTIwV9TgkjIOnE5qN1yDqEgEllGMASoGeeSD6Hegq3dWWk4hmA1eLVMT4sQfcnBzB61YScTvMEnSZA3II2EKOuwodtEKKyt4lBQrBwIwwMaSDMEciNsg1IMJnJgqpaMGACxIYkatsZA1e1Vs6EFLapSd31/oiw8RMyDBwf3gGR7Gn45ZtodWqYABI8OTgMD8sad43PqU5kxGfzweXLPTG9C40eAALHyiSZnnPQD06jeoRe41ApNCzzxgg4E02MRPn6+VNIjzmozFOYpTS/sSuYwfpvmp8Na1sFG5IEeZqqxqxwtwoyuN1Ooe1SkZp5NzdIBx/CNauNbbdTH60JbRq5xfENcuG4253pIk1O50VYtFvlyASzXoH8KbYPGrjZHb6CP1rlbHCjc12HdkNwXEq7qQXtkKcMDq0kEEHO0Hnmq99uuzo5NBGGN19TTovfxeVfjW+vw/yJry+6leh9/uJ+NxbAz/poqZEScsWAk4OoVyV/hBGKj1UnRODQxngju7owTYPIj3xtmgGtO4kUl4Y3FZQBKK9yYJYqi5Qf0gS3lBq+MrOZqtFstoy6ekFp9NOc0amqemlpoAYClRUGKVACbemp23pqgYaompGi8PZ1HJgVF0CRWir/AGOpLkYiJJOwCspJqxwPYF6/cFqyut2mASFkASTJwMVq2+713hg7XFKuoKlCPEuqBIiQfUTUOSo06SD9VP4J8XfJs38/aAjAXxi2X3GSAsYgjrVjte0q6EQMdCoTDGFDEspSZDLJkAzME7EkPZYoSFZtAViyiWA1KJuOOZCuwMeKBmQtVLxkoCyi0xZLaIWJcLgLIXUF1Qg1QSM53pUdTJ9T+5R4sy8biHyMNCSZJYTkDnuT5kmoyiSRGNUDSB1nw+0f4Aq3fJUtpIyIJGoT4yd3+aMgaskDbahuSCSSAQWMksZwPAsCA2GGcZMxAoM0lyT4JiAVJOw3CtHoYJHLIjpRkMFscxkyT4gM7wYAiDyHXNVLVyCQoG5yYkA7Y6DGBRrbRtJJbmfmBmTjoJM1W15OjjmlBRfhktc6WnMLOqTtjHOBHLpUeJaVPQkZ/Y9KZkIOWGDiSce8R0qXGPKTzEZHPP8A3Qlyab9j/syjp8v2edb/AHc7qPxa32B0/CtF183nwqfIhW/CsnhFkjbP1HrXtH8NeDC2Lj/eIHso/wD0abltI52qUYYXLzxX5nhd22QYNMoIHkcV0XengRbvMoxDFfoYrnWbcU0XaKJwjF2ib2yMH858s9NqnaarFphqBMHUNURIHOIO8Zx/eji1b5qRg5DZJHQQdj/1S2dLFHbygnC3eVdT3Y4d+Jupw7O3w/E0TIXSpjTPy5I2rkiFRQwbP3dzzzIwNtvI+lbvdnvAOEvJedJUqy/MFwwBkYPT3qtRp2i/U5E8Tr6q/U1O+XYn8tdAXKOoIJ31DDD8j71yvE3IxW/3v78pxegJYZFTOp2XUdSzGlQQBsZn2ri+J7QZswBOAJ/GfT86l47Zm0+tUMKeX6kK407Z/wAUVrirZ0oRrlviEZiPCiq4GnSRrmCZ1DfYZLXCeZ/H86e15dD5/ZNXRjRydTrXldJcEA1MKgDUgac5pKKUU0GlB6UEkwKVIT0pUEBWGajFRa5mm+JQNaCCuk7O7OR+Ee6uHtQxkiCpYKfcTXL66t2O0rq22to0KxBYACTBkSekwfalaJj2anD9o3bVxLto6XRpBEEzsRHMEEiPM1vdvd7LnGXbI+GEKqyvpY+MsMSY8KiMCT8xzWZ2e/D2uEuXCFuXnUIoPhNpjIDAT4t5kdOlZCcRoZIuAmQxIOQeYPnVSts6kIrHOL6fHJ0PDaviEuDFwiDO2lZAMdROOYBrJuEWibNxSdCwvQ6m1gwSQFg7wT6VrsxMMygDGlnwAYYlipODD4AydHLesnty3hLkqSJRyvhLGcbmWXDZ8vYMuzfqVXPx+wC48OQ2JBVi4yMxpMZEr4ZGYOBQmAUSAS0mGPIxyQbdc8497bqiW7LySXDsyh1AOhiQDEFcFQTJPzbRVJlaB82zZmeox0EyPOT1qTFJc0hWrgBJI+YmR92djnpPtFHt4XMAxIIgtMz+U/X0qrwxMz7TyzmDPp+Bo1y+ZGqNuZ1ADaMeke/KlaLscklYa9cCgCJxkHeRIz03O3+arvhI2lsk4+tO14fNgkzyYFcQCJ3mfaPSmscE1wAgxJ5g/UdfwoiqLJZXJNR5dEOGeDP79a91/hjxAfgyRyuMP/VT+teTdm9iSyqkEudOpmhciYOwE43neup7v9qXeEU29GlS2qNMGRCvsI2g9cYnap3c2irNppzw7W1fDo57vw5bi7yDlcYf+xrm+N4O4i62QhDsZBHuRtXb9rtYv32uFVLXHJwBOWAElSCPfOPOn7GujhmNwp8ReSsxCicHxRnfY9D0qN1MnJp5OCb4dfqcTaJAXf0MwZz6dKt6wJkkFVnwzkyNycAbD1AoHFa1YoQUEltB5SMwTEiOnpVRbmCPX1NTVjeuoRSL1pi5kgkAGQBJIOB77emKBxrRGSQRImPITA2n8waElyBEZPkCIxgA8/3zpviAZAONjsN4BPqJ57mhIpzZ040vxFdPhgcjkHeYjP0/E+dVXcxHnP0x+tH+IdwRPzEHqCYwcE+Lz51VuH/NOjnZZt8jav3yovDvJAbbM+4E/lVYGj8Pz2wrb/l6/uaYog/cjoLXdj41h73DNqNsS6EiY6rXNVf4btW7aQpbdlVtwOf+KpF+tQrGyyjJ2lRHWacXDT6/Kpah90VJWTS4YpU6OI+UfjT0BbKzEzTTRGtiabTQQRBq92VwNy64W2JPPoB5mqyoelek/wAMOAS4GD2wRM58qTI3t4LMckpJs5HtDsopgkzzjSR+BmshEKOswRIyPXpXd99FtJeZLaOpkkoVG+TKgZjc45Vw3FtsyziD9DM0mNujbOO73vtHUcGwDrltwY8YEDAPXAJMjGKpdpvKNbOXBXEETq06SB1gDl/ifFdozdDG2iBgpVVyij5Z0zmckid6nc7S0K62i6G5OpvkdiY0iFYDSRPLM89y1UzrZJxlGl57/IzjahFUkagGYgj5V6SDvKtKkCNQ3JqmuQMbwoPLGP7VeI8AmJc6mzJK7wSdhq04HLnjFS6pkmANvDsJYTgcsfpQYMiqmN8eEFvSohixaBrYkAAa9woAwNpJPo63IKlPm6cjj1nVk45RiZoVqPtGF29fQwc7fWhByYUNuQI/U8ooqzP6tJfxl7huGZhLGVXO4IPOAesDbG3tWlaJ+XYbRiIziemYo/BdnMjOis66RpBXHi0liHIOD8wK5ySKG6MpJK4jw+EkjY64G220YB61DNONuJfs8QoB2YnEFFKkTuNRPLy5711nBdoWFtq9/h9TCRqZmVm+1JA8JYCJmCQJA5VwwUo2pSMaGOlgpKts2oHEERPI/hHieNMgKSWnSQJfUXjZZyy7REzvypaaLpZIzSTfXdcGn2uYZrlvSBq1AKukLscDoJAn1PnUuF4wYzqGowxHheMQoJ9cR1nrWHd7RI0nVBBYDHy7ggqRO/M8+UCqlziSo+Ip0gsRCSACV1DSdgM5XccpGwot9hqNXFx230dB2yEuIcICSwVlIidQJWAABMcpmPITyKLO0SJxzMbmOlbtvtFWDBgpDeFgSdKyYBGmZ8thynM1i9qjRcIBU5PjXZ1YyrR1gwR7cqeKpUc3JlumyDPvieuTvyPrk1HLGPfJJOB5eQ6UBbn7/f7zR1YGNlk/OdQxEESo2z0mnopc93JEzmeQ8+o/vQmovxJwRO0eQG+OckzQiOWfT9+9SVsGam74BxjHmQev0/GhMY3pFxUiXRds2QRLGP6Rv7nlVd3E1v8AAdmq/DvdLeIHbHSZ/CPfyrn3XJqqE1JtLwWzg4pP5G+JS+JUCPOnG2GI9CasKg1thH+aVPbumN/z/vSoCx2fNL4npQGBk00GiibLQ4givTP4f9uf6DpaRfiojM5YwoUfbnbEgaTv1rykA11PcTjltXmFxyqXAqsRmQrBiI5zn/NLKNotwJOSTRb7US6Xa+jsWOos+qH8QKnIyJBjGIMbVj8NwZdGIIGn7J3PpW53lvjVcFlyyai5ZQR4WPh1DyJj1rP4V0axoQs18sqqiiSQZAEx6c+YqmbdKjuS2epb6r/Bzl3VrAEknAGSSZwAOdaNrhLqtqu27ijeWRuWwgxivZ+73cz+TVCptliJvXGXU7GD4LZOEQGPMxJnasvtfg1u3WUt5RyFU5dVs6XBztNFSm3f3PLb94sep2mABvzjEe39qr3Hjw8o2HPH9xz6Cui7y93PhWzdt3A41brzgwcgkGCPwrlbIByZjl5/4rRimskbXQZ5y3U/PkbiLpbOJiMAD6xzzv6VPsxv9RCcgMDtnfl55/CiI46ex2rW4Th7fgX4RF3WoFxLh0EFlGlkg5ycgj0p3KuCvHhcpKV38nTN2XoQqoJ1PpuNJL6FBZvhhRHijQZkiRjM1Vv2Li2LZybvwmuQw1EhdIMz/vUADlGwFaycUdDeAmVeAoliDqbkPvT4j51icNb+HZm+T85KAFjhwoKjTuCXBgbQTvSI1cu7OdTjmUvIDB41AzydXkdDII/8jQrnEzp0zqjONIVpYQsHoVM9SffSfi0UIPCyK7PoQkFwwXUhJk+ILEmdOY3gYapO3IE78hn8Bn2qxIx5ZVLgnfuyWMkkHBJg85xG2fKhazBzuc53OSDp9znzoZqJamoyuTZZRhEiQYhgTOqeYwIHUEncexLltCoXxao6iJnaImNPnueWxqKxMfuKK7Y5c/yzUMmLJ3OBKrMn6VVB5c/zrSs8aRbAb23zmMfT8KI1w3UFoDUSdUwJUgEtpJ28IyBvAmSBUXXY8kpP2qjNDTJwPLP0AonDWy09B+4mrNjgLZIVmZDsXPiXy8MT9K1uA4Y8JcUvpdNXhdZ0vnzEg84NLOdRbjyy7Hp5OSclx8l3u1q4dviPbXSQANSCCN5zviM11HE8F2T2ghRFTh+JjwMgA1ORsVUQ48OQRzwd65rtXim413uKVt20ICoIGs83jEsZB9PPfmi5RsGIkSPpVGO5O3w/sasmnioKUuES4hnsNcsvIZGKMMjKkiRPI7isi8xmu1PaXDcVaNm+pDhf9K+CSVfEK0nKECCAOY2KyeK4i2ysyMIZSVI5gqYIPuK0xSOflTVeV4YMk1HUalFLTTlAgTSqaLilQAfQ87H6U+h/un6Gm0Z3X/kB+dHs8Jcb5BP+17Z/JqgewJPUUg8bVfXszi+VniCOqo7D6rIqvf4Z/FrVlZYDalIZS3yhwcrPKd6CefAC5xDcjNexdndr9nCx2csAObiIgT5hpZVZ7xIB+fruZIwDHixtEnFFa09thqBBBDRMbeY2ONxSyinwDlJ8s+reKdNAJIAEHJiNomdsxXl/HK7X2CmPEYOoZHXyqnwf8QxxFk2ryKG2IaGDRkMJEE4+tcj2r2w7O26jrP8AasMoSnJqSo2YWoR3WaXejtFjFhcwdMLmTyAA3Mn8aqcNwp4ew6uFb4iqj41ovjVwutG+cFVzykjoTX7muj8YjXJdUm7B+0VIxnnkkf1AV2PfPsRUK3bZ0qwHw7y/IwfIW6Rs0n5zIIjGDV+PH6caQ3q+pLc1xVHn1+0I1BQB1Xb6VPiOJ0aI8McwTBDA+L8Z503FowJGFY/ZHyP5ryHp/wBVmcS8gbwPynP41alZVLOkmo8Wdd2H2orSW0qSPm0gHXvkjMb7dBnJBo9rdoNcaAAqqT8hOSQFLSc7CBPL8Oc4a+y7EjIP0rW4K6XHw8sGJYLIA1gATJI0+EHPkBG9S40Njzp/V2Ct25Klj4C4UkEagJGogZIwcEiJ9DQ24eHPiIT72JAIIgid5BU5jferLNBI0gS4aAJPinw77DEA58UGqrnecnYZkctzzpkU5Kb5KrH8qhUmNMGpigYCiPcDACY5E48vr70J3xWl2R2LcupduxFu0ut3bC8vAG2LkHC1DBFiz2UYKXFuKQdisEEA/MjQRy6bn0rY7N7qXfhtxKhLiW/nVGPxUAUmSrgArsSRq+U9DXQ9yV4dnHxj4Y39qo94btu1fZrDsgGA6kghWMNkcs5Gxqu74NCdNNeDm+O4s3NTt4pJZjGCzfaxIBknzqhc45jb0kkgbDODIM/gfrRrd34bsGWGAPhIkDGqIPLA9jVQFHYKSEDEAschQftQOn6URQzzSVpPss8FxRghTg0C/wBPPfn6VvduW7A0/Bti2VWAFiHwG1Nk5MsBBOAuTyyL/EJcGpmGraMD8BSxau0jS5+ph2SfK6+DPV4NNx10vcZmySc+oAB/Kkyj+1E7S4i29xnVNAaDpXTpBjOkKoAE8quOa26op0ppw6+dNrXpUiEgaVPbdY2P1p6ABM2aYmpMM00UAMMbVrcP24+kW7yrftjAVydaAxIt3QdaekleqnasuKVAG/w/DWXabF3fa3dKW7in+lyRbuf8lP8ATyod/hLmso4ZH3COjqxBO4UiY86wyau8J2rdtroDym/w3VblveZ0OCoM8wAaVxseM64LZ4OASQPYhqocQvrVq92oHy1vQ07ozFf+LljM/dZR5VWNwNsZ9iCPY4/GoSa7GlJNcIL2Nx7WLouKSB8rQYMHIPqCAfauyu943NhrCgG2/iKTIBJ8XwzEFCZOjl6zPDIhJAHPEVYV3UFdh0wR7zRKNlmHK4xa8Fq/xSgaY1Lgw06l329fPpUU4T4vjMwTGNyccsx61m3LhPOr/CdplEZY8WnShxC7jb3mja0uCuU9ztlG/b0sV3jnUFeKOLJa2ziNKFQ3VS8x/uBI9pqrNMiuy+t8YIOegB5GRvv/AIoDv+/37/SqcxS1miiXNsMz1BrlCJpoqRQjNXWd0+Lstw/E8JebR8YI6XNQBDWyTpg/NM4GNmzmuQFWbCCCZziB1yOfKlkrVDRdM6zs7sm5be4BdRkQGfEVBzuJGPr9aFeuC4CYwpk5+bTkqW2VYmTWfZ7UPwvgi0kzm5La2HINJiAeQj85zLl4kaS0DfY+2BzqpRk3yzTKeNRVIhe4oszE5JMk9ae1B36Ex1IGBQXdcRJPMnb2HKh/EPLFXmWzRfj7hTQzCJJG0gHJURynMcsxuapfEA86ATSqEkgbbJtcJplqNTUVJAqVSpUATTalUkGKVAH/2Q=="
+                            alt="">
+                        <img src="https://assets.winni.in/product/primary/2022/6/61344.jpeg?dpr=2&w=220"
+                            alt="">
+                        <img src="https://www.amabiente.com/uploads/tx_imagecycle/MELO-Kugeln_4-2.5_01.jpg"
+                            alt="">
+                    </div>
+                    <p class="controller">
+                        <!-- &lang: left side caret
+                      &rang: right side caret -->
+                        <span class="prev">&lang;</span>
+                        <span class="next">&rang;</span>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <i class="bi bi-suit-heart "></i>
+                        <i class="bi bi-chat"></i>
+                        <a href="#" id="sns_urlCoby" class="btn_share_sns" title="새창" onclick="clip(); return false;">
+                            <i class="bi bi-send"></i></a>
+                        <i class="bi bi-bookmark"></i>
+                    </div>
+                    <p class="card-text">1000 likes</p>
+                    <span class="user">scented.candles</span>
+                    <!-- caption -->
+                    <span id="captionThird" class="caption">
+                        They have a special power!
+                    </span>
+                    <a class="btn-more" id="btn-3" onclick="readMoreThird()">Read more</a>
+                    <ul id="thirdComment">
+                    </ul>
+                    <!-- comment -->
+                    <div class="comment">
+                        <i class="bi bi-emoji-smile" id="smail-3"></i>
+                        <input class="form-control form-control-sm" id="commentThirdInput" type="text"
+                            placeholder="Add a comment" aria-label=".form-control-sm example">
+                        <button onclick="postThirdComment()">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</body>
+<!-- script links should be down below to make the likes work  -->
+<script src="slides.js"></script>
+<script src="layout.js"></script>
+<script src="searchInput.js"></script>
+<script src="story.js"></script>
+<script src="icons.js"></script>
+<script src="readMore.js"></script>
+<script src="comment.js"></script>
+<script src="storySlide.js"></script>
+</html>

@@ -1,0 +1,59 @@
+.gnb {
+    /* Height of the GNB */
+    height: 50px;
+    border-bottom: 2px inset rgb(239, 239, 239);
+}
+
+/* Content that is inside my GNB */
+.gnb>.contents {
+    /* Width is 800px */
+    width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contents img {
+    /* Specifying the size of the logo */
+    width: 150px;
+    margin-right: auto;
+
+}
+
+.contents>input {
+    /* These are for the input field/ search box */
+    width: 200px;
+    height: 40px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(232,232,232);
+
+    margin: auto;
+
+}
+ 
+.contents div:last-child {
+    /* This is the div, which contains all my icons */
+
+    /* All my icons, will now occupy 200px */
+    width: 200px;
+    font-size: 25px;
+    padding: 0 10px;
+    
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.contents div >i {
+    margin: 0 5px;
+
+} 
